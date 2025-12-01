@@ -7,7 +7,7 @@ export function Hero() {
         <div className="flex flex-col items-center text-center pt-20 pb-12 space-y-6">
             <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-muted">
                 <Image
-                    src="/profile.jpg"
+                    src="./profile.jpg"
                     alt="Patrick Poon"
                     height={900}
                     width={900}

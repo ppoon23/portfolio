@@ -18,7 +18,7 @@ const timelineData: TimelineItem[] = [
         title: "Senior AI/ML Engineer",
         company: "Acubed by Airbus",
         companyUrl: "https://www.linkedin.com/company/airbus/",
-        logo: "/acubed3.png",
+        logo: "./acubed3.png",
         description: (
             <div className="space-y-4">
                 <p>
