@@ -1,11 +1,12 @@
 import React from "react"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
+import acubedLogo from "@/assets/acubed3.png"
 
 interface TimelineItem {
     year: string
-    logo?: string
+    logo?: string | StaticImageData
     title: string
     company: string
     companyUrl?: string
@@ -18,7 +19,7 @@ const timelineData: TimelineItem[] = [
         title: "Senior AI/ML Engineer",
         company: "Acubed by Airbus",
         companyUrl: "https://www.linkedin.com/company/airbus/",
-        logo: "./acubed3.png",
+        logo: acubedLogo,
         description: (
             <div className="space-y-4">
                 <p>
