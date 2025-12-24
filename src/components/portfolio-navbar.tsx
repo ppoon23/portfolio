@@ -8,6 +8,7 @@ export function PortfolioNavbar() {
         { name: "Home", url: "#", icon: Home },
         { name: "About", url: "#", icon: User },
         { name: "Projects", url: "#", icon: Briefcase },
+        { name: "Blog", url: "/blog", icon: FileText },
         { name: "Resume", url: "#", icon: FileText },
     ]
 
