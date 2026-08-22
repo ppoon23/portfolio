@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Geist_Mono, Newsreader } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/context/theme-context";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 const geistMono = Geist_Mono({
@@ -12,9 +15,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   title: "Patrick Poon",
-  description: "AI/ML software engineer",
+  description: "AI/ML Software and Data Engineer specializing in LLMs, computer vision models, scalable data pipelines, and active learning.",
   manifest: "/site.webmanifest",
 };
 
@@ -24,11 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" data-theme="dark" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.variable} ${geistMono.variable} ${newsreader.variable} font-sans antialiased bg-(--japandi-canvas) text-(--text-heading) selection:bg-(--accent-primary) selection:text-(--accent-primary-fg)`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

@@ -1,16 +1,16 @@
 "use client"
 
-import { NavBar } from "@/components/tubelight-navbar"
-import { Home, User, Briefcase, FileText } from "lucide-react"
+import { NavBar, NavItem } from "@/components/tubelight-navbar"
+import { Home, Sparkles, Cpu, Briefcase, BookOpen } from "lucide-react"
 
 export function PortfolioNavbar() {
-    const navItems = [
-        { name: "Home", url: "#", icon: Home },
-        { name: "About", url: "#", icon: User },
-        { name: "Projects", url: "#", icon: Briefcase },
-        { name: "Blog", url: "/blog", icon: FileText },
-        { name: "Resume", url: "#", icon: FileText },
-    ]
+  const navItems: NavItem[] = [
+    { name: "Home", url: "#home", icon: Home },
+    { name: "Highlights", url: "#highlights", icon: Sparkles },
+    { name: "Skills", url: "#skills", icon: Cpu },
+    { name: "Experience", url: "#experience", icon: Briefcase },
+    { name: "Blog", url: "#blog", icon: BookOpen },
+  ]
 
-    return <NavBar items={navItems} />
+  return <NavBar items={navItems} />
 }

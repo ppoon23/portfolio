@@ -2,68 +2,185 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  /** Base colors */
-  --clr-dark-a0: #000000;
-  --clr-light-a0: #ffffff;
+  /** Light Theme (Japandi Warm Earth Palette) */
+  --japandi-canvas: #f3f0e8;
+  --japandi-stone: #e6e4e0;
+  --japandi-tea: #b9b99d;
+  --japandi-birch: #e0cfc3;
+  --japandi-sand: #dfcaba;
+  --japandi-wood: #dcb482;
+  --japandi-clay: #c09e85;
+  --japandi-ash: #8f837a;
+  --japandi-slate: #858480;
+  --japandi-charcoal: #5e5e5e;
+  --japandi-dark: #2d2b2a;
 
-  /** Theme primary colors */
-  --clr-primary-a0: #277ee3;
-  --clr-primary-a10: #508be7;
-  --clr-primary-a20: #6c99ea;
-  --clr-primary-a30: #84a7ed;
-  --clr-primary-a40: #9bb5f1;
-  --clr-primary-a50: #b0c3f4;
+  /** Semantic Variables for Light Mode */
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-bg-hover: #ffffff;
+  --card-border: rgba(223, 202, 186, 0.85);
+  --card-border-hover: rgba(192, 158, 133, 0.55);
+  --card-shadow: 0 4px 20px -2px rgba(45, 43, 42, 0.035), 0 2px 6px -1px rgba(45, 43, 42, 0.015);
+  --card-shadow-hover: 0 12px 32px -4px rgba(45, 43, 42, 0.08);
 
-  /** Theme surface colors */
-  --clr-surface-a0: #121212;
-  --clr-surface-a10: #282828;
-  --clr-surface-a20: #3f3f3f;
-  --clr-surface-a30: #575757;
-  --clr-surface-a40: #717171;
-  --clr-surface-a50: #8b8b8b;
+  --text-heading: #2d2b2a;
+  --text-body: #5e5e5e;
+  --text-muted: #858480;
+  --text-ash: #8f837a;
 
-  /** Theme tonal surface colors */
-  --clr-surface-tonal-a0: #191c24;
-  --clr-surface-tonal-a10: #2e3139;
-  --clr-surface-tonal-a20: #45474e;
-  --clr-surface-tonal-a30: #5d5f65;
-  --clr-surface-tonal-a40: #75777d;
-  --clr-surface-tonal-a50: #8f9196;
+  --accent-primary: #c09e85;
+  --accent-primary-fg: #ffffff;
+  --accent-warm: #dcb482;
+  --accent-clay: #c09e85;
 
-  /** Success colors */
-  --clr-success-a0: #22946e;
-  --clr-success-a10: #47d5a6;
-  --clr-success-a20: #9ae8ce;
+  --pill-bg: #f3f0e8;
+  --pill-border: #dfcaba;
+  --pill-text: #2d2b2a;
 
-  /** Warning colors */
-  --clr-warning-a0: #a87a2a;
-  --clr-warning-a10: #d7ac61;
-  --clr-warning-a20: #ecd7b2;
+  --footer-border: rgba(223, 202, 186, 0.8);
+  --footer-bg: rgba(255, 255, 255, 0.75);
 
-  /** Danger colors */
-  --clr-danger-a0: #9c2121;
-  --clr-danger-a10: #d94a4a;
-  --clr-danger-a20: #eb9e9e;
+  --canvas-line-main: rgba(143, 131, 122, 0.09);
+  --canvas-line-accent: rgba(220, 180, 130, 0.25);
+  --glow-1: rgba(220, 180, 130, 0.22);
+  --glow-2: rgba(223, 202, 186, 0.18);
+  --glow-3: rgba(192, 158, 133, 0.15);
+}
 
-  /** Info colors */
-  --clr-info-a0: #21498a;
-  --clr-info-a10: #4077d1;
-  --clr-info-a20: #92b2e5;
+[data-theme="dark"],
+.dark {
+  /** Dark Theme (Sumi Charcoal Night) */
+  --japandi-canvas: #161514;
+  --japandi-stone: #23211f;
+  --japandi-tea: #363a32;
+  --japandi-birch: #322e2b;
+  --japandi-sand: #3d3936;
+  --japandi-wood: #dcb482;
+  --japandi-clay: #c09e85;
+  --japandi-ash: #9c9790;
+  --japandi-slate: #7a7670;
+  --japandi-charcoal: #c9c7c2;
+  --japandi-dark: #f3f0e8;
 
-  /* Global mappings (Enforcing Dark Mode) */
-  --background: var(--clr-surface-a0);
-  --foreground: var(--clr-light-a0);
+  /** Semantic Variables for Dark Mode */
+  --card-bg: rgba(28, 26, 24, 0.88);
+  --card-bg-hover: #23211f;
+  --card-border: rgba(68, 64, 60, 0.65);
+  --card-border-hover: rgba(220, 180, 130, 0.45);
+  --card-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 12px 36px -4px rgba(0, 0, 0, 0.6);
+
+  --text-heading: #f3f0e8;
+  --text-body: #c9c7c2;
+  --text-muted: #9c9790;
+  --text-ash: #b0aba2;
+
+  --accent-primary: #dcb482;
+  --accent-primary-fg: #161514;
+  --accent-warm: #dcb482;
+  --accent-clay: #c09e85;
+
+  --pill-bg: #23211f;
+  --pill-border: #3d3936;
+  --pill-text: #f3f0e8;
+
+  --footer-border: rgba(68, 64, 60, 0.6);
+  --footer-bg: rgba(28, 26, 24, 0.8);
+
+  --canvas-line-main: rgba(243, 240, 232, 0.05);
+  --canvas-line-accent: rgba(220, 180, 130, 0.22);
+  --glow-1: rgba(220, 180, 130, 0.12);
+  --glow-2: rgba(192, 158, 133, 0.09);
+  --glow-3: rgba(223, 202, 186, 0.06);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-japandi-canvas: var(--japandi-canvas);
+  --color-japandi-stone: var(--japandi-stone);
+  --color-japandi-tea: var(--japandi-tea);
+  --color-japandi-birch: var(--japandi-birch);
+  --color-japandi-sand: var(--japandi-sand);
+  --color-japandi-wood: var(--japandi-wood);
+  --color-japandi-clay: var(--japandi-clay);
+  --color-japandi-ash: var(--japandi-ash);
+  --color-japandi-slate: var(--japandi-slate);
+  --color-japandi-charcoal: var(--japandi-charcoal);
+  --color-japandi-dark: var(--japandi-dark);
+
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-text-heading: var(--text-heading);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-warm: var(--accent-warm);
+
+  --font-sans: var(--font-montserrat);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-newsreader);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--japandi-canvas);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--japandi-canvas);
+  color: var(--text-heading);
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--japandi-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--japandi-sand);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-warm);
+}
+
+/* Japandi Editorial Card */
+.editorial-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card-hover:hover {
+  background: var(--card-bg-hover);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Editorial Typography Helpers */
+.font-editorial-serif {
+  font-family: var(--font-newsreader), Georgia, serif;
+}
+
+.editorial-tag {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 600;
 }
